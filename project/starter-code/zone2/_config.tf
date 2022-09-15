@@ -10,11 +10,12 @@ terraform {
    region = "us-west-1"
    #profile = "default"
    
- provider "aws" {
-  alias  = "usw1"
-  region = "us-west-1"
-}
    default_tags {
      tags = local.tags
    }
  }
+
+ provider "aws" {
+  alias  = "usw1"
+  region = "us-west-1"
+}
