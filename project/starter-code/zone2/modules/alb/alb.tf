@@ -1,5 +1,5 @@
 resource "aws_lb_target_group" "udacity" {
-  name     = "udacity-lb-tg"
+  name     = "udacity-lb-new-tg"
   port     = 80
   protocol = "HTTP"
   vpc_id   = var.vpc_id
@@ -13,7 +13,7 @@ resource "aws_lb_target_group_attachment" "udacity" {
 }
 
 resource "aws_lb" "udacity" {
-  name               = "udacity-lb-tf"
+  name               = "udacity-lb-new-tf"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [var.ec2_sg]
